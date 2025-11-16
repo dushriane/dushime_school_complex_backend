@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+dushime.db
+.env
+.git
