@@ -7,8 +7,7 @@ def send_contact_email(payload: dict):
     """Sends a simple email using smtplib. Runs in background."""
     try:
         msg = EmailMessage()
-        msg["Subject"] = f"Contact form: {payload.get('subject')}
-        "
+        msg["Subject"] = f"Contact form: {payload.get('subject')}"
         msg["From"] = settings.FROM_EMAIL
         msg["To"] = settings.ADMIN_EMAIL
         body = f"Name: {payload.get('name')}\nEmail: {payload.get('email')}\n\nMessage:\n{payload.get('message')}"
